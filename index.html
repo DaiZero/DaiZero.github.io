@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/17/docker-commands/" itemprop="url">docker-commands</a></h1>
+                <a class="post-title-link" href="/2018/04/17/docker-commands/" itemprop="url">Docker常用命令</a></h1>
         
 
         <div class="post-meta">
@@ -333,51 +333,51 @@
       
         
           
-            <h1 id="Helper"><a href="#Helper" class="headerlink" title="Helper"></a>Helper</h1><p>Docker��������:�г��������ʹ�÷����Ͳ�������<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker [command] -h/--help</span><br></pre></td></tr></table></figure></p>
-<h1 id="Image-����"><a href="#Image-����" class="headerlink" title="Image[����]"></a>Image[����]</h1><h2 id="��ȡ����"><a href="#��ȡ����" class="headerlink" title="��ȡ����"></a>��ȡ����</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull [OPTIONS] image_name[:TAG|@DIGEST]</span><br></pre></td></tr></table></figure>
-<p>���ò�����</p>
+            <h1 id="Helper"><a href="#Helper" class="headerlink" title="Helper"></a>Helper</h1><p>Docker帮助命令:列出该命令的使用方法和参数设置<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker [command] -h/--help</span><br></pre></td></tr></table></figure></p>
+<h1 id="Image-镜像"><a href="#Image-镜像" class="headerlink" title="Image[镜像]"></a>Image[镜像]</h1><h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull [OPTIONS] image_name[:TAG|@DIGEST]</span><br></pre></td></tr></table></figure>
+<p>常用参数：</p>
 <ul>
-<li><strong>-a/–all-tags:</strong>��������汾 ��Ĭ��Ϊtrue)��</li>
-<li><strong>–disable-content-trust:</strong>���زִ��ڵ����о���Ĭ��Ϊfalse)��</li>
-<li><strong>–platform string:</strong>����������Ƕ�ƽ̨������ƽ̨��<h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push [OPTIONS] image_name[:TAG]</span><br></pre></td></tr></table></figure>
+<li><strong>-a/–all-tags:</strong>跳过镜像版本 （默认为true)。</li>
+<li><strong>–disable-content-trust:</strong>下载仓储内的所有镜像（默认为false)。</li>
+<li><strong>–platform string:</strong>如果服务器是多平台，设置平台。<h2 id="发布镜像"><a href="#发布镜像" class="headerlink" title="发布镜像"></a>发布镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push [OPTIONS] image_name[:TAG]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>���ò�����</p>
+<p>常用参数：</p>
 <ul>
-<li><strong>–disable-content-trust:</strong>��������汾 ��Ĭ��Ϊtrue)��<h2 id="�г����ؾ���"><a href="#�г����ؾ���" class="headerlink" title="�г����ؾ���"></a>�г����ؾ���</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<li><strong>–disable-content-trust:</strong>跳过镜像版本 （默认为true)。<h2 id="列出本地镜像"><a href="#列出本地镜像" class="headerlink" title="列出本地镜像"></a>列出本地镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>���ò�����</p>
+<p>常用参数：</p>
 <ul>
-<li><strong>-a/–all:</strong>�г����о���(Ĭ��Ϊfalse)��</li>
-<li><strong>—no-trunc:</strong>��Ҫ�ض����(Ĭ��Ϊfalse)��</li>
-<li><strong>-q/–quiet:</strong>ֻ��ʾ����ID��(Ĭ��Ϊfalse)��<h2 id="ɾ������"><a href="#ɾ������" class="headerlink" title="ɾ������"></a>ɾ������</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi [image_name]</span><br></pre></td></tr></table></figure>
+<li><strong>-a/–all:</strong>列出所有镜像(默认为false)。</li>
+<li><strong>—no-trunc:</strong>不要截断输出(默认为false)。</li>
+<li><strong>-q/–quiet:</strong>只显示镜像ID号(默认为false)。<h2 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi [image_name]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>���ò�����</p>
+<p>常用参数：</p>
 <ul>
-<li><strong>-f/–force:</strong>Force(Ĭ��Ϊfalse)��</li>
-<li><strong>–no-prune:</strong>��ɾ��δ��ǵĸ���(Ĭ��Ϊfalse)��</li>
+<li><strong>-f/–force:</strong>Force(默认为false)。</li>
+<li><strong>–no-prune:</strong>不删除未标记的父类(默认为false)。</li>
 </ul>
-<h1 id="Container-����"><a href="#Container-����" class="headerlink" title="Container[����]"></a>Container[����]</h1><h2 id="��������-1"><a href="#��������-1" class="headerlink" title="��������"></a>��������</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3306:3306 --name container_name image_name[:TAG|@DIGEST]</span><br></pre></td></tr></table></figure>
-<p>���ò�����</p>
+<h1 id="Container-容器"><a href="#Container-容器" class="headerlink" title="Container[容器]"></a>Container[容器]</h1><h2 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3306:3306 --name container_name image_name[:TAG|@DIGEST]</span><br></pre></td></tr></table></figure>
+<p>常用参数：</p>
 <ul>
-<li><strong>-d:</strong>�������ں�̨���С�</li>
-<li><strong>-P:</strong>�������ڲ�ʹ�õ�����˿�ӳ�䵽����ʹ�õ������ϡ�</li>
+<li><strong>-d:</strong>让容器在后台运行。</li>
+<li><strong>-P:</strong>将容器内部使用的网络端口映射到我们使用的主机上。</li>
 </ul>
-<h2 id="�鿴����"><a href="#�鿴����" class="headerlink" title="�鿴����"></a>�鿴����</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-<p>���ò�����</p>
+<h2 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<p>常用参数：</p>
 <ul>
-<li><strong>-a/–all:</strong>����������Ĭ��ֻ��ʾ���е���������</li>
-<li><strong>-l/–latest:</strong>չʾ���´�����������</li>
+<li><strong>-a/–all:</strong>所有容器（默认只显示运行的容器）。</li>
+<li><strong>-l/–latest:</strong>展示最新创建的容器。</li>
 </ul>
-<h2 id="������־"><a href="#������־" class="headerlink" title="������־"></a>������־</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs [ct_id/ct_name]</span><br></pre></td></tr></table></figure>
-<h2 id="��������-2"><a href="#��������-2" class="headerlink" title="��������"></a>��������</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect [ct_id/ct_name]</span><br></pre></td></tr></table></figure>
-<h2 id="�޸i�������"><a href="#�޸i�������" class="headerlink" title="�޸ı�������"></a>�޸ı�������</h2><blockquote>
-<p>image�൱���࣬container�൱��ʵ�����������Զ�̬��ʵ����װ�������Ȼ������container��commit����̻���һ��image��</p>
+<h2 id="容器日志"><a href="#容器日志" class="headerlink" title="容器日志"></a>容器日志</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs [ct_id/ct_name]</span><br></pre></td></tr></table></figure>
+<h2 id="容器详情"><a href="#容器详情" class="headerlink" title="容器详情"></a>容器详情</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect [ct_id/ct_name]</span><br></pre></td></tr></table></figure>
+<h2 id="修改保存容器"><a href="#修改保存容器" class="headerlink" title="修改保存容器"></a>修改保存容器</h2><blockquote>
+<p>image相当于类，container相当于实例，不过可以动态给实例安装新软件，然后把这个container用commit命令固化成一个image。</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit [OPTIONS] [ct_id/ct_name] [REPOSITORY[:TAG]]</span><br></pre></td></tr></table></figure>
-<h2 id="��������-3"><a href="#��������-3" class="headerlink" title="��������"></a>��������</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> ֹͣһ������</span><br><span class="line">docker stop [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> ��һ������</span><br><span class="line">docker start [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> ����һ���������е�����</span><br><span class="line">docker restart [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> ɾ����������</span><br><span class="line">docker rm `docker ps -a -q`</span><br><span class="line"><span class="meta">#</span> ɾ��һ������</span><br><span class="line">docker rm [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> ɱ��һ������</span><br><span class="line">docker kill [ct_id/ct_name]</span><br></pre></td></tr></table></figure>
+<h2 id="操作容器"><a href="#操作容器" class="headerlink" title="操作容器"></a>操作容器</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 停止一个容器</span><br><span class="line">docker stop [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> 启动一个容器</span><br><span class="line">docker start [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> 重启一个正在运行的容器</span><br><span class="line">docker restart [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> 删除所有容器</span><br><span class="line">docker rm `docker ps -a -q`</span><br><span class="line"><span class="meta">#</span> 删除一个容器</span><br><span class="line">docker rm [ct_id/ct_name]</span><br><span class="line"><span class="meta">#</span> 杀死一个容器</span><br><span class="line">docker kill [ct_id/ct_name]</span><br></pre></td></tr></table></figure>
           
         
       
